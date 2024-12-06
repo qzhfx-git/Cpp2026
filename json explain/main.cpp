@@ -1,6 +1,12 @@
-#include <iostream>
+#include<iostream>
+#include<fstream>
+#include "Val.h"
+
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+    std::ifstream fin("input.txt");
+    std::stringstream ss;
+    ss << fin.rdbuf();
+    Val x = parser(ss.str());
+    std::cout << x << std::endl;
 }

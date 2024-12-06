@@ -3,4 +3,6 @@ project(json_explain)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(json_explain main.cpp)
+add_executable(json_explain main.cpp
+        Val.cpp
+        Val.h)
