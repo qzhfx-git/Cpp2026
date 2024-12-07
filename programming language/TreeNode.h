@@ -50,6 +50,13 @@ public:
             case '=':
                 mp[L->var] = R->eval();
                 return mp[L->var];
+            case 'a': return L->eval() == R->eval();
+            case 'b':
+                if (L->eval() == 1 && R->eval() == 0)return 0;
+                else return 1;
+            case '|': return L->eval() || R->eval();
+            case '&': return L->eval() && R->eval();
+            case '!': return !((R->eval() == 1));
         }
     }
 };
