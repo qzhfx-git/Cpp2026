@@ -2,7 +2,6 @@
 #include<fstream>
 #include "Val.h"
 
-
 int main() {
     std::ifstream fin("input.txt");
     std::stringstream ss;
